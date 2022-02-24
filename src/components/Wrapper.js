@@ -1,4 +1,4 @@
-import Menu from "./menu"
+import Menu from "./Menu.js"
 import Script from "next/script";
 const Wrapper = (props) => {
     return (
