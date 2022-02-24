@@ -2,7 +2,7 @@
 import NextCors from 'nextjs-cors';
 import {addDestination, destinations} from '../../data/db.js'
 const { faker } = require('@faker-js/faker');
-export default function handler(req, res) {
+export default async function handler(req, res) {
 
   await NextCors(req, res, {
     // Options
