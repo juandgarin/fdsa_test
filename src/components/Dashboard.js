@@ -25,16 +25,6 @@ const Dashboard = () => {
         lastModify: ''
     })
 
-    const getDestinations = async () => {
-        console.log(`${process.env.NEXT_PUBLIC_BASE_URL}/api/destinations`)
-        const result = await axios({
-            method: "get",
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-              },
-            url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/destinations`,
-        });
-
     //Editing or Adding Handler 
     const [isEditing, setIsEditing] = useState(false);
     
@@ -120,7 +110,15 @@ const Dashboard = () => {
         setIsEditing(false);
     }
   
-
+    const getDestinations = async () => {
+        console.log(`${process.env.NEXT_PUBLIC_BASE_URL}/api/destinations`)
+        const result = await axios({
+            method: "get",
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+              },
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/destinations`,
+        });
         
         return result.data
     }
