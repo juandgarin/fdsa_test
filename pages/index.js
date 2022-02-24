@@ -1,4 +1,4 @@
-import Dashboard from '../src/Components/Dashboard.js';
+import Dashboard from '../src/components/Dashboard.js';
 const HomePage = () => {
   return (
     <>
