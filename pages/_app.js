@@ -10,4 +10,5 @@ function MyApp({ Component, pageProps }) {
   </Container>
 
 }
+
 export default MyApp
