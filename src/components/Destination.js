@@ -15,7 +15,7 @@ const Destination = ({setIsEditing,references, data, setData, dest, setSelectedD
 
     const handleDelete = (selectedDestination) => {
         console.log(selectedDestination)
-        axios.delete('http://localhost:3000/api/deleteDestination', {
+        axios.delete(`${process.env.NEXT_PUBLIC_BASE_URL}/api/deleteDestination`, {
             data: {
                 id: dest.id
             }

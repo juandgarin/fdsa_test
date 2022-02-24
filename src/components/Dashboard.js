@@ -1,6 +1,7 @@
 import { useState, useEffect,useRef } from 'react';
 import axios from 'axios';
 import Destination from './Destination';
+
 const Dashboard = () => {
     const references = {
         refId: useRef(),
@@ -69,7 +70,7 @@ const Dashboard = () => {
  
         let result = await axios({
             method: "put",
-            url: 'http://localhost:3000/api/editDestination',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/editDestination `,
             data: editedDestination
           });
           
@@ -89,7 +90,7 @@ const Dashboard = () => {
             }
             let result = await axios({
                 method: "post",
-                url: 'http://localhost:3000/api/addDestination',
+                url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/addDestination`,
                 data: newDestination
               });
               console.log("ADDING");
@@ -104,7 +105,8 @@ const Dashboard = () => {
     }
   
     const getDestinations = async () => {
-        const result = await axios('http://localhost:3000/api/destinations')
+        console.log(`${process.env.NEXT_PUBLIC_BASE_URL}/api/destinations`)
+        const result = await axios(`${process.env.NEXT_PUBLIC_BASE_URL}/api/destinations`)
         return result.data
     }
 
