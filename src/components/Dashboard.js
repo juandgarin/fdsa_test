@@ -70,6 +70,9 @@ const Dashboard = () => {
  
         let result = await axios({
             method: "put",
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+              },
             url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/editDestination `,
             data: editedDestination
           });
@@ -90,6 +93,9 @@ const Dashboard = () => {
             }
             let result = await axios({
                 method: "post",
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                  },
                 url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/addDestination`,
                 data: newDestination
               });
@@ -106,7 +112,14 @@ const Dashboard = () => {
   
     const getDestinations = async () => {
         console.log(`${process.env.NEXT_PUBLIC_BASE_URL}/api/destinations`)
-        const result = await axios(`${process.env.NEXT_PUBLIC_BASE_URL}/api/destinations`)
+        const result = await axios({
+            method: "get",
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+              },
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/destinations`,
+        });
+        
         return result.data
     }
 
