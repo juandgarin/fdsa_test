@@ -1,0 +1,12 @@
+import '../styles/globals.css'
+import 'bootswatch/dist/superhero/bootstrap.min.css';
+
+import Container from '../src/components/Container';
+function MyApp({ Component, pageProps }) {
+
+  return <Container>
+    <Component {...pageProps} />
+  </Container>
+
+}
+export default MyApp

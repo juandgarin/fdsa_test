@@ -1,0 +1,28 @@
+{
+  "name": "fdsa_developertest",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "node data/seed.js && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "seed": "node data/seed.js",
+    "server": "json-server --port 3001 --watch data/db.json"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^6.0.0-alpha.7",
+    "axios": "^0.26.0",
+    "bootstrap": "^5.1.3",
+    "bootswatch": "^5.1.3",
+    "json-server": "^0.17.0",
+    "md5": "^2.3.0",
+    "next": "12.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "eslint": "8.9.0",
+    "eslint-config-next": "12.1.0"
+  }
+}
