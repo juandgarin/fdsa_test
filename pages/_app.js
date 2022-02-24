@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import 'bootswatch/dist/superhero/bootstrap.min.css';
 
-import Container from '../src/components/Container';
+import Container from '../src/Components/Container';
 function MyApp({ Component, pageProps }) {
 
   return <Container>
