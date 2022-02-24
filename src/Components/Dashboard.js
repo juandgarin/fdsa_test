@@ -28,7 +28,7 @@ const Dashboard = () => {
     const [isEditing, setIsEditing] = useState(false);
     
     //Fetching destinations
-    useEffect(async () => {
+    useEffect(async function() {
         setData(await getDestinations())
   }, []);
  
